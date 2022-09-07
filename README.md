@@ -8,12 +8,12 @@ BEGIN
 UPDATE Customers
 SET Phone = 
         CASE 
-			WHEN LEN(i.phone) = 12
-					THEN '+ 994 (' + SUBSTRING(i.phone, 4, 2)
-						+ ') '
-						+ SUBSTRING(i.phone, 6, 3)
-						+ '-'
-						+ RIGHT(i.phone, 4)
+		WHEN LEN(i.phone) = 12
+				THEN '+ 994 (' + SUBSTRING(i.phone, 4, 2)
+					+ ') '
+					+ SUBSTRING(i.phone, 6, 3)
+					+ '-'
+					+ RIGHT(i.phone, 4)
             WHEN LEN(i.phone) = 8
                 THEN '+ 994 (' + left(i.phone, 2)
                     + ') '
