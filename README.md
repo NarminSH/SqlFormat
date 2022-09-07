@@ -29,3 +29,6 @@ SET Phone =
         Customers 
         ON Customers.CustomerID = i.CustomerID;
 END
+
+
+//Supported phone formats: 994552214466, +994552214466, 0552214466
